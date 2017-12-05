@@ -9,11 +9,12 @@ const opts = {
 }
 
 const bws = new BFX(API_KEY, API_SECRET, opts).ws
+const cId = Date.now()
+
 
 bws.on('auth', () => {
   // emitted after .auth()
-  // needed for private api endpoints
-  const cId = Date.now()
+  // needed for private api endpoints  
   console.log('authenticated')
   /*setTimeout(() => {
     submitOrder(cId)
@@ -52,7 +53,7 @@ function submitOrder () {
       'cid': cId, // unique client order id
       'type': 'LIMIT',
       'symbol': 'tBTCUSD',
-      'amount': '0.001',
+      'amount': '0.002',
       'price': '200',
       'hidden': 0
     }
