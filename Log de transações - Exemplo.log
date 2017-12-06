@@ -1,0 +1,36 @@
+[0,"ps",[]]
+[0,"ws",[["margin","BTC",0.20792955,0,null],["margin","BTG",0.00003931,0,null],["exchange","BTG",0,0,null],["exchange","USD",483.78299147,0,null],["margin","USD",7256.44810452,0,null],["margin","BCH",1.14896772,0,null],["margin","DSH",0,0,null],["margin","IOT",0,0,null],["exchange","BTC",0,0,null],["margin","ETH",4.00000915,0,null],["exchange","ETH",0,0,null],["margin","ETC",0,0,null],["margin","LTC",50.04741352,0,null],["exchange","LTC",0,0,null]]]
+[0,"os",[[5818178825,null,2307050173,"tIOTUSD",1512520707107,1512520707154,20,20,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.8076,0,null,null,null,null,null,0,0,0]]]
+[0,"fos",[]]
+[0,"fcs",[]]
+[0,"fls",[]]
+[0,"ats",[]]
+
+[0,"n",[null,"ou-req",null,null,[5818178825,null,2307050173,null,null,null,20,null,"LIMIT",null,null,null,null,null,null,null,3.8816,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit buy order for 20.0 IOTA."]]
+[0,"ou",[5818178825,null,2307050173,"tIOTUSD",1512520707107,1512520817996,20,20,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.8816,0,null,null,null,null,null,0,0,0]]
+
+[0,"n",[null,"ou-req",null,null,[5818178825,null,2307050173,null,null,null,20,null,"LIMIT",null,null,null,null,null,null,null,3.882,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit buy order for 20.0 IOTA."]]
+[0,"ou",[5818178825,null,2307050173,"tIOTUSD",1512520707107,1512520847325,20,20,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.882,0,null,null,null,null,null,0,0,0]]
+
+[0,"n",[null,"on-req",null,null,[5818296359,null,2556563952,"tIOTUSD",null,null,-20,-20,"LIMIT",null,null,null,null,null,null,null,3.949,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 20.0 IOTA."]]
+[0,"on",[5818296359,null,2556563952,"tIOTUSD",1512520956596,1512520956629,-20,-20,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.949,0,null,null,null,null,null,0,0,0]]
+
+[0,"pu",["tIOTUSD","ACTIVE",-20,3.949,0,0,null,null,null,null]]
+[0,"oc",[5818296359,null,2556563952,"tIOTUSD",1512520956596,1512520964019,0,-20,"LIMIT",null,null,null,0,"EXECUTED @ 3.949(-20.0)",null,null,3.949,3.949,null,null,null,null,null,0,0,0]]
+[0,"te",[109986133,"tIOTUSD",1512520963973,5818296359,-20,3.949,"LIMIT",3.949,1]]
+[0,"pu",["tIOTUSD","ACTIVE",-20,3.949,0,0,null,null,null,null]]
+[0,"tu",[109986133,"tIOTUSD",1512520963973,5818296359,-20,3.949,"LIMIT",3.949,1,-0.063184,"USD"]]
+[0,"wu",["margin","USD",7256.38492052,0,null]]
+[0,"n",[null,"ou-req",null,null,[5818178825,null,2307050173,null,null,null,20,null,"LIMIT",null,null,null,null,null,null,null,3.929,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit buy order for 20.0 IOTA."]]
+[0,"ou",[5818178825,null,2307050173,"tIOTUSD",1512520707107,1512520967190,20,20,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.929,0,null,null,null,null,null,0,0,0]]
+[0,"hb"]
+[0,"n",[null,"ou-req",null,null,[5818178825,null,2307050173,null,null,null,20,null,"LIMIT",null,null,null,null,null,null,null,3.9174,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit buy order for 20.0 IOTA."]]
+[0,"ou",[5818178825,null,2307050173,"tIOTUSD",1512520707107,1512520977666,20,20,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.9174,0,null,null,null,null,null,0,0,0]]
+
+[0,"pc",["tIOTUSD","CLOSED",-20,3.949,0,0,null,null,null,null]]
+[0,"wu",["margin","USD",7257.01692052,0,null]]
+[0,"oc",[5818178825,null,2307050173,"tIOTUSD",1512520707107,1512521124647,0,20,"LIMIT",null,null,null,0,"EXECUTED @ 3.9174(20.0)",null,null,3.9174,3.9174,null,null,null,null,null,0,0,0]]
+[0,"te",[109989393,"tIOTUSD",1512521124620,5818178825,20,3.9174,"LIMIT",3.9174,1]]
+[0,"tu",[109989393,"tIOTUSD",1512521124620,5818178825,20,3.9174,"LIMIT",3.9174,1,-0.0626784,"USD"]]
+[0,"wu",["margin","USD",7256.95424212,0,null]]
+
