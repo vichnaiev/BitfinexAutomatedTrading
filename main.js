@@ -18,12 +18,16 @@ var stopOrderId = 0
 var stopOrderInternalId = 0
 var stopOrderAmount = 0
 var stopOrderDate = ''
+var stopOrderPrice = 0
+var ignorePU = false
 
 
 bws.on('auth', () => {
   // emitted after .auth()
   // needed for private api endpoints  
   console.log('authenticated')
+  
+  //DEBUG CALL
   /*setTimeout(() => {
     submitStopGainOrder('tIOTUSD',0.1,20)
   }, 5000)  */
@@ -166,11 +170,11 @@ function cancelOrdersByGroupId (groupId) {
     'oc_multi',
     null,
     {
-      'gid': [[GID],[groupId]]
+      'gid': [[groupId]]
     }
   ]
   bws.send(payload)
-  writeable.write(getCurrentDateTime() + " Sent cancel request: " + groupId)
+  writeable.write(getCurrentDateTime() + " Sent cancel request for group " + groupId)
   writeable.write('\r\n')
 }
 
@@ -194,8 +198,9 @@ bws.on('message', (msg) => {
 
   
   if (type === 'pu') { // new order confirmed
-    if(payload[1] === 'ACTIVE') {
+    if(payload[1] === 'ACTIVE' && !ignorePU) {
 		if (stopOrderId!=0 && stopOrderAmount!=-payload[2]){
+			cancelOrdersByGroupId(1)
 			cancelOrderByClientId(stopOrderId, stopOrderDate)
 			cancelOrder(stopOrderInternalId)			
 			stopOrderId = 0
@@ -218,21 +223,31 @@ bws.on('message', (msg) => {
     if(stopOrderId != 0 && payload[13] === 'ACTIVE' && stopOrderId==payload[2])
 	{
 		stopOrderInternalId = payload[0]
-		writeable.write(getCurrentDateTime() + ' Found stop confirmation, setting internal id to ' + stopOrderInternalId)
+		writeable.write(getCurrentDateTime() + ' Found stop confirmation at ON, setting internal id to ' + stopOrderInternalId)
 		writeable.write('\r\n')
 		//DEBUG ONLY CALL
 		//cancelOrderByClientId(stopOrderId, stopOrderDate)
+		//cancelOrdersByGroupId(1)
+	}
+  }	
+  if (type === 'n') { // new order confirmed
+    if(stopOrderId != 0 && payload[1] === 'on-req' && stopOrderId==payload[4][2])
+	{
+		stopOrderInternalId = payload[4][0]
+		writeable.write(getCurrentDateTime() + ' Found stop confirmation at ON-REQ, setting internal id to ' + stopOrderInternalId)
+		writeable.write('\r\n')		
 	}
   }	
   
-  /*if (type === 'te') { // trade executed
-    if(payload[3] === buyOrder[1] && payload[2] === cId && payload[6] > 0) {
-		console.log('Trade executed')		
-		writeable.write('Trade executed')
+  if (type === 'te') { // trade executed
+    if(payload[3] == stopOrderInternalId) {
+		ignorePU = true
+		console.log('Ignoring next position update, stop order being executed')		
+		writeable.write('Ignoring next position update, stop order being executed')
 		writeable.write('\r\n')
-		buyOrder[1]=payload[0];
-	}
-  }*/
+		
+	} else ignorePU = false
+  }
 
   if (type === 'pc') { // position closed 
 	stopOrderId = 0
