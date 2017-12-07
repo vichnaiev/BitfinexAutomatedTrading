@@ -15,6 +15,7 @@ var cId = Date.now()
 const writeable = fs.createWriteStream(path.join(__dirname, '/main.log'))
 var buyOrder = [0,0,0]
 var stopOrderId = 0
+var stopOrderInternalId = 0
 var stopOrderAmount = 0
 var stopOrderDate = ''
 
@@ -92,7 +93,9 @@ function submitStopGainOrder (symbol, price, amount) {
 	  stopOrderAmount = amount
 	  var tempDate = new Date(Date.now())
 	  stopOrderDate = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate()
-	  console.log('StopOrderDate: ' + stopOrderDate)
+	  console.log(new Date(Date.now()).toString() + " Stop created")
+	  writeable.write(getCurrentDateTime() + " Stop created: " + symbol + "at " + price + "at the amount of " + amount + " Client Id: " + cId + ". Date: " + stopOrderDate)
+	  writeable.write('\r\n')
   }
 }
 
@@ -132,8 +135,9 @@ function cancelOrder (oId) {
       'id': oId
     }
   ]
-
   bws.send(payload)
+  writeable.write(getCurrentDateTime() + " Sent cancel request by internal id: " + oId)
+  writeable.write('\r\n')
 }
 
 function cancelOrderByClientId (clientId, orderDate) {
@@ -148,8 +152,26 @@ function cancelOrderByClientId (clientId, orderDate) {
 	  'cid_date': orderDate
     }
   ]
-
   bws.send(payload)
+  console.log(new Date(Date.now()).toString() + " Sent cancel request")
+  writeable.write(getCurrentDateTime() + " Sent cancel request: " + clientId + " " + orderDate)
+  writeable.write('\r\n')  
+}
+
+function cancelOrdersByGroupId (groupId) {
+  // https://docs.bitfinex.com/v2/reference#ws-input-order-cancel
+
+  const payload = [
+    0,
+    'oc_multi',
+    null,
+    {
+      'gid': [[GID],[groupId]]
+    }
+  ]
+  bws.send(payload)
+  writeable.write(getCurrentDateTime() + " Sent cancel request: " + groupId)
+  writeable.write('\r\n')
 }
 
 bws.on('message', (msg) => {
@@ -160,13 +182,13 @@ bws.on('message', (msg) => {
   
   if(type === 'on' || type === 'ou' || type === 'oc' || type === 'te' || type === 'n')
   {
-	console.log('----message-begin----')
+	console.log('----message-begin---- ' + new Date(Date.now()).toString())
 	console.log(msg)
-	console.log('-----message-end-----')		
+	console.log('-----message-end----- ' + new Date(Date.now()).toString())		
   }  
   if(type != 'hb')
   {
-	writeable.write(JSON.stringify(msg))
+	writeable.write(getCurrentDateTime() + ' ' + JSON.stringify(msg))
     writeable.write('\r\n')  
   }	  
 
@@ -174,14 +196,18 @@ bws.on('message', (msg) => {
   if (type === 'pu') { // new order confirmed
     if(payload[1] === 'ACTIVE') {
 		if (stopOrderId!=0 && stopOrderAmount!=-payload[2]){
-			cancelOrder(stopOrderId)			
+			cancelOrderByClientId(stopOrderId, stopOrderDate)
+			cancelOrder(stopOrderInternalId)			
 			stopOrderId = 0
+			console.log(new Date(Date.now()).toString() + ' Stop order has different amount, cancelling and creating a new one on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])		
+			writeable.write(getCurrentDateTime() + ' Stop order has different amount, cancelling and creating a new one on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])
+			writeable.write('\r\n')		
 		}		
 		if (stopOrderId === 0){
 			var target = payload[2]>0 ? payload[3]*1.01 : payload[3]*0.99
 			target = target.toFixed(4)
-			console.log('Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])		
-			writeable.write('Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])
+			console.log(new Date(Date.now()).toString() + ' Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])		
+			writeable.write(getCurrentDateTime() + ' Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])
 			writeable.write('\r\n')		
 			submitStopGainOrder(payload[0], target, -payload[2])
 		}
@@ -189,27 +215,28 @@ bws.on('message', (msg) => {
   }	
   
   if (type === 'on') { // new order confirmed
-    if(payload[13] === 'ACTIVE' && payload[2] === cId && payload[6] > 0) {
-		console.log('Found Active Order')		
-		writeable.write('Found Active Order')
+    if(stopOrderId != 0 && payload[13] === 'ACTIVE' && stopOrderId==payload[2])
+	{
+		stopOrderInternalId = payload[0]
+		writeable.write(getCurrentDateTime() + ' Found stop confirmation, setting internal id to ' + stopOrderInternalId)
 		writeable.write('\r\n')
-		buyOrder[1]=payload[0];
+		//DEBUG ONLY CALL
+		//cancelOrderByClientId(stopOrderId, stopOrderDate)
 	}
-	//DEBUG ONLY CALL
-	//cancelOrderByClientId(stopOrderId, stopOrderDate)
   }	
   
-  if (type === 'te') { // trade executed
-    if(payload[3] === BuyOrder[1] && payload[2] === cId && payload[6] > 0) {
+  /*if (type === 'te') { // trade executed
+    if(payload[3] === buyOrder[1] && payload[2] === cId && payload[6] > 0) {
 		console.log('Trade executed')		
 		writeable.write('Trade executed')
 		writeable.write('\r\n')
 		buyOrder[1]=payload[0];
 	}
-  }
+  }*/
 
   if (type === 'pc') { // position closed 
 	stopOrderId = 0
+	stopOrderDate = ''
   }
 })
 
@@ -217,3 +244,8 @@ bws.on('error', (error) => {
   console.error('Error:')
   console.error(error)
 })
+
+function getCurrentDateTime(){
+	var tempDate = new Date(Date.now())
+	return(tempDate.getDate() + '/' + (tempDate.getMonth()+1) + '/' + tempDate.getFullYear() + ' ' + tempDate.getHours() + ':' +  tempDate.getMinutes() + ':' + tempDate.getSeconds()+ ':' + tempDate.getMilliseconds())	
+}

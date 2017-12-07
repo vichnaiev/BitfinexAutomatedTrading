@@ -1,12 +1,247 @@
-[0,"ps",[["tIOTUSD","ACTIVE",20,4.378,0,0,null,null,null,null]]]
-[0,"ws",[["margin","BTC",0.20792955,0,null],["margin","BTG",0.00003931,0,null],["exchange","BTG",0,0,null],["exchange","USD",0,0,null],["margin","USD",7307.00663487,0,null],["margin","BCH",1.14896772,0,null],["margin","DSH",0,0,null],["margin","IOT",0,0,null],["exchange","BTC",0,0,null],["margin","ETH",4.00000915,0,null],["exchange","ETH",0,0,null],["margin","ETC",0,0,null],["margin","LTC",50.04741352,0,null],["exchange","LTC",0,0,null],["exchange","IOT",110.10878604,0,null]]]
-[0,"os",[[5823290974,null,13036088772,"tIOTUSD",1512531436196,1512531436256,-20,-20,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.4283,0,null,null,null,null,null,0,0,0],[5823311393,null,13074533082,"tIOTUSD",1512531474576,1512531477983,20,20,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.19,0,null,null,null,null,null,0,0,0]]]
-[0,"fos",[]]
-[0,"fcs",[]]
-[0,"fls",[]]
-[0,"ats",[]]
-[0,"n",[null,"on-req",null,null,[5823459544,null,13394198562,"tIOTUSD",null,null,80,80,"LIMIT",null,null,null,null,null,null,null,4.2726,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 80.0 IOTA."]]
-[0,"on",[5823459544,null,13394198562,"tIOTUSD",1512531794217,1512531794458,80,80,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.2726,0,null,null,null,null,null,0,0,0]]
-[0,"n",[null,"ou-req",null,null,[5823459544,null,13394198562,null,null,null,80,null,"LIMIT",null,null,null,null,null,null,null,4.287,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit buy order for 80.0 IOTA."]]
-[0,"ou",[5823459544,null,13394198562,"tIOTUSD",1512531794217,1512531805381,80,80,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.287,0,null,null,null,null,null,0,0,0]]
-[0,"pc",["tIOTUSD","CLOSED",20,4.378,0,0,null,null,null,null]]
+6/12/2017 23:51:2:32 [0,"ps",[]]
+6/12/2017 23:51:2:32 [0,"ws",[["margin","BTC",0.10792955,0,null],["margin","BTG",0.00003931,0,null],["exchange","BTG",0,0,null],["exchange","USD",0,0,null],["margin","USD",7891.51932765,0,null],["margin","BCH",1.14896772,0,null],["margin","DSH",0,0,null],["margin","IOT",409.59757202,0,null],["exchange","BTC",0,0,null],["margin","ETH",4.00000915,0,null],["exchange","ETH",0,0,null],["margin","ETC",0,0,null],["margin","LTC",50.04741352,0,null],["exchange","LTC",0,0,null],["exchange","IOT",0,0,null]]]
+6/12/2017 23:51:2:32 [0,"os",[]]
+6/12/2017 23:51:2:32 [0,"fos",[]]
+6/12/2017 23:51:2:32 [0,"fcs",[]]
+6/12/2017 23:51:2:32 [0,"fls",[]]
+6/12/2017 23:51:2:32 [0,"ats",[]]
+6/12/2017 23:51:12:864 [0,"n",[null,"on-req",null,null,[5857175092,null,6669792238,"tIOTUSD",null,null,-22,-22,"LIMIT",null,null,null,null,null,null,null,3.8693,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 22.0 IOTA."]]
+6/12/2017 23:51:12:916 [0,"on",[5857175092,null,6669792238,"tIOTUSD",1512611469822,1512611469857,-22,-22,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.8693,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:51:43:30 [0,"pu",["tIOTUSD","ACTIVE",-22,3.8693,0,0,null,null,null,null]]
+6/12/2017 23:51:43:30 Stop not found, creating Order on tIOTUSD with price 3.8306 at the amount of 22
+6/12/2017 23:51:43:30 Stop created: tIOTUSDat 3.8306at the amount of 22 Client Id: 1512611503030. Date: 2017-12-6
+6/12/2017 23:51:43:30 [0,"oc",[5857175092,null,6669792238,"tIOTUSD",1512611469822,1512611499996,0,-22,"LIMIT",null,null,null,0,"EXECUTED @ 3.8693(-22.0)",null,null,3.8693,3.8693,null,null,null,null,null,0,0,0]]
+6/12/2017 23:51:43:96 [0,"te",[112018494,"tIOTUSD",1512611499968,5857175092,-22,3.8693,"LIMIT",3.8693,1]]
+6/12/2017 23:51:43:190 [0,"pu",["tIOTUSD","ACTIVE",-22,3.8693,0,0,null,null,null,null]]
+6/12/2017 23:51:43:243 [0,"tu",[112018494,"tIOTUSD",1512611499968,5857175092,-22,3.8693,"LIMIT",3.8693,1,-0.06809968,"USD"]]
+6/12/2017 23:51:43:447 [0,"wu",["margin","USD",7891.45122797,0,null]]
+6/12/2017 23:51:44:262 [0,"n",[null,"on-req",null,null,[5857190058,null,1512611503030,"tIOTUSD",null,null,22,22,"LIMIT",null,null,null,null,null,null,null,3.8306,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 22.0 IOTA."]]
+6/12/2017 23:51:44:312 [0,"on",[5857190058,1,1512611503030,"tIOTUSD",1512611501162,1512611501242,22,22,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.8306,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:51:44:312 Found stop confirmation, setting internal id to 5857190058
+6/12/2017 23:52:9:271 [0,"n",[null,"on-req",null,null,[5857204001,null,6726173253,"tIOTUSD",null,null,-88,-88,"LIMIT",null,null,null,null,null,null,null,3.9416,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 88.0 IOTA."]]
+6/12/2017 23:52:9:324 [0,"on",[5857204001,null,6726173253,"tIOTUSD",1512611526190,1512611526247,-88,-88,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.9416,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:53:41:184 [0,"pu",["tIOTUSD","ACTIVE",-110,3.92714,0,0,null,null,null,null]]
+6/12/2017 23:53:41:186 Sent cancel request: 1512611503030 2017-12-6
+6/12/2017 23:53:41:186 Sent cancel request by internal id: 5857190058
+6/12/2017 23:53:41:189 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 110
+6/12/2017 23:53:41:190 Stop not found, creating Order on tIOTUSD with price 3.8879 at the amount of 110
+6/12/2017 23:53:41:191 Stop created: tIOTUSDat 3.8879at the amount of 110 Client Id: 1512611621190. Date: 2017-12-6
+6/12/2017 23:53:41:214 [0,"oc",[5857204001,null,6726173253,"tIOTUSD",1512611526190,1512611618046,0,-88,"LIMIT",null,null,null,0,"EXECUTED @ 3.9416(-88.0)",null,null,3.9416,3.9416,null,null,null,null,null,0,0,0]]
+6/12/2017 23:53:41:222 [0,"te",[112020435,"tIOTUSD",1512611618013,5857204001,-88,3.9416,"LIMIT",3.9416,1]]
+6/12/2017 23:53:41:874 [0,"pu",["tIOTUSD","ACTIVE",-110,3.92714,0,0,null,null,null,null]]
+6/12/2017 23:53:41:994 [0,"n",[null,"oc-req",null,null,[null,null,1512611503030,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+6/12/2017 23:53:41:999 [0,"n",[null,"oc-req",null,null,[5857190058,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857190058)."]]
+6/12/2017 23:53:42:25 [0,"tu",[112020435,"tIOTUSD",1512611618013,5857204001,-88,3.9416,"LIMIT",3.9416,1,-0.27748864,"USD"]]
+6/12/2017 23:53:42:190 [0,"wu",["margin","USD",7891.17373933,0,null]]
+6/12/2017 23:53:42:190 [0,"oc",[5857190058,1,1512611503030,"tIOTUSD",1512611501162,1512611619101,22,22,"LIMIT",null,null,null,0,"CANCELED",null,null,3.8306,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:53:43:814 [0,"on",[5857252358,1,1512611621190,"tIOTUSD",1512611620714,1512611620768,110,110,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.8879,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:53:43:814 Found stop confirmation, setting internal id to 5857252358
+6/12/2017 23:53:43:882 [0,"n",[null,"on-req",null,null,[5857252358,null,1512611621190,"tIOTUSD",null,null,110,110,"LIMIT",null,null,null,null,null,null,null,3.8879,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 110.0 IOTA."]]
+6/12/2017 23:54:39:741 [0,"n",[null,"on-req",null,null,[5857284091,null,6876653309,"tIOTUSD",null,null,-440,-440,"LIMIT",null,null,null,null,null,null,null,4.077,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 440.0 IOTA."]]
+6/12/2017 23:54:47:284 [0,"on",[5857284091,null,6876653309,"tIOTUSD",1512611676677,1512611684221,-440,-440,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.077,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:58:1:352 [0,"pc",["tIOTUSD","CLOSED",-110,3.92714,0,0,null,null,null,null]]
+6/12/2017 23:58:1:352 [0,"wu",["margin","USD",7895.49013933,0,null]]
+6/12/2017 23:58:1:353 [0,"oc",[5857252358,1,1512611621190,"tIOTUSD",1512611620714,1512611878310,0,110,"LIMIT",null,null,null,0,"EXECUTED @ 3.8879(110.0)",null,null,3.8879,3.8879,null,null,null,null,null,0,0,0]]
+6/12/2017 23:58:1:354 [0,"te",[112025208,"tIOTUSD",1512611878299,5857252358,110,3.8879,"LIMIT",3.8879,1]]
+6/12/2017 23:58:2:107 [0,"tu",[112025208,"tIOTUSD",1512611878299,5857252358,110,3.8879,"LIMIT",3.8879,1,-0.3421352,"USD"]]
+6/12/2017 23:58:2:639 [0,"wu",["margin","USD",7895.14800413,0,null]]
+6/12/2017 23:58:52:357 [0,"n",[null,"ou-req",null,null,[5857284091,null,6876653309,null,null,null,-22,null,"LIMIT",null,null,null,null,null,null,null,4.077,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit sell order for 22.0 IOTA."]]
+6/12/2017 23:58:52:410 [0,"ou",[5857284091,null,6876653309,"tIOTUSD",1512611676677,1512611929363,-22,-22,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.077,0,null,null,null,null,null,0,0,0]]
+6/12/2017 23:58:59:774 [0,"n",[null,"ou-req",null,null,[5857284091,null,6876653309,null,null,null,-22,null,"LIMIT",null,null,null,null,null,null,null,3.9059,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting update to limit sell order for 22.0 IOTA."]]
+6/12/2017 23:59:5:258 [0,"ou",[5857284091,null,6876653309,"tIOTUSD",1512611676677,1512611942233,-22,-22,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.9059,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:0:18:744 [0,"pu",["tIOTUSD","ACTIVE",-22,3.9059,0,0,null,null,null,null]]
+7/12/2017 0:0:18:754 Stop not found, creating Order on tIOTUSD with price 3.8668 at the amount of 22
+7/12/2017 0:0:18:754 Stop created: tIOTUSDat 3.8668at the amount of 22 Client Id: 1512612018754. Date: 2017-12-7
+7/12/2017 0:0:18:754 [0,"oc",[5857284091,null,6876653309,"tIOTUSD",1512611676677,1512612015678,0,-22,"LIMIT",null,null,null,0,"EXECUTED @ 3.9059(-22.0)",null,null,3.9059,3.9059,null,null,null,null,null,0,0,0]]
+7/12/2017 0:0:18:754 [0,"te",[112027853,"tIOTUSD",1512612015641,5857284091,-22,3.9059,"LIMIT",3.9059,1]]
+7/12/2017 0:0:18:855 [0,"pu",["tIOTUSD","ACTIVE",-22,3.9059,0,0,null,null,null,null]]
+7/12/2017 0:0:18:955 [0,"tu",[112027853,"tIOTUSD",1512612015641,5857284091,-22,3.9059,"LIMIT",3.9059,1,-0.06874384,"USD"]]
+7/12/2017 0:0:18:956 [0,"wu",["margin","USD",7895.07926029,0,null]]
+7/12/2017 0:0:20:88 [0,"n",[null,"on-req",null,null,[5857458564,null,1512612018754,"tIOTUSD",null,null,22,22,"LIMIT",null,null,null,null,null,null,null,3.8668,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 22.0 IOTA."]]
+7/12/2017 0:0:20:88 [0,"on",[5857458564,1,1512612018754,"tIOTUSD",1512612016993,1512612017035,22,22,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.8668,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:0:20:88 Found stop confirmation, setting internal id to 5857458564
+7/12/2017 0:0:43:271 [0,"n",[null,"on-req",null,null,[5857472084,null,7240193987,"tIOTUSD",null,null,-88,-88,"LIMIT",null,null,null,null,null,null,null,3.9768,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 88.0 IOTA."]]
+7/12/2017 0:0:43:322 [0,"on",[5857472084,null,7240193987,"tIOTUSD",1512612040208,1512612040254,-88,-88,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.9768,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:1:54:55 [0,"pc",["tIOTUSD","CLOSED",-22,3.9059,0,0,null,null,null,null]]
+7/12/2017 0:1:54:55 [0,"wu",["margin","USD",7895.93946029,0,null]]
+7/12/2017 0:1:54:55 [0,"oc",[5857458564,1,1512612018754,"tIOTUSD",1512612016993,1512612110989,0,22,"LIMIT",null,null,null,0,"EXECUTED @ 3.8668(22.0)",null,null,3.8668,3.8668,null,null,null,null,null,0,0,0]]
+7/12/2017 0:1:54:56 [0,"te",[112029773,"tIOTUSD",1512612110956,5857458564,22,3.8668,"LIMIT",3.8668,1]]
+7/12/2017 0:1:54:201 [0,"tu",[112029773,"tIOTUSD",1512612110956,5857458564,22,3.8668,"LIMIT",3.8668,1,-0.06805568,"USD"]]
+7/12/2017 0:1:54:203 [0,"wu",["margin","USD",7895.87140461,0,null]]
+7/12/2017 0:2:0:188 [0,"n",[null,"on-req",null,null,[5857513225,null,7316811940,"tIOTUSD",null,null,-22,-22,"LIMIT",null,null,null,null,null,null,null,3.901,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 22.0 IOTA."]]
+7/12/2017 0:2:0:188 [0,"on",[5857513225,null,7316811940,"tIOTUSD",1512612116957,1512612117011,-22,-22,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.901,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:2:3:935 [0,"pu",["tIOTUSD","ACTIVE",-22,3.901,0,0,null,null,null,null]]
+7/12/2017 0:2:3:935 Stop not found, creating Order on tIOTUSD with price 3.8620 at the amount of 22
+7/12/2017 0:2:3:935 Stop created: tIOTUSDat 3.8620at the amount of 22 Client Id: 1512612123935. Date: 2017-12-7
+7/12/2017 0:2:3:935 [0,"oc",[5857513225,null,7316811940,"tIOTUSD",1512612116957,1512612120897,0,-22,"LIMIT",null,null,null,0,"EXECUTED @ 3.901(-22.0)",null,null,3.901,3.901,null,null,null,null,null,0,0,0]]
+7/12/2017 0:2:3:935 [0,"te",[112029862,"tIOTUSD",1512612120893,5857513225,-22,3.901,"LIMIT",3.901,1]]
+7/12/2017 0:2:4:37 [0,"pu",["tIOTUSD","ACTIVE",-22,3.901,0,0,null,null,null,null]]
+7/12/2017 0:2:4:88 [0,"tu",[112029862,"tIOTUSD",1512612120893,5857513225,-22,3.901,"LIMIT",3.901,1,-0.0686576,"USD"]]
+7/12/2017 0:2:4:237 [0,"wu",["margin","USD",7895.80274701,0,null]]
+7/12/2017 0:2:4:981 [0,"n",[null,"on-req",null,null,[5857516053,null,1512612123935,"tIOTUSD",null,null,22,22,"LIMIT",null,null,null,null,null,null,null,3.862,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 22.0 IOTA."]]
+7/12/2017 0:2:4:982 [0,"on",[5857516053,1,1512612123935,"tIOTUSD",1512612121836,1512612121890,22,22,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.862,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:2:4:982 Found stop confirmation, setting internal id to 5857516053
+7/12/2017 0:8:7:654 [0,"pu",["tIOTUSD","ACTIVE",-110,3.96164,0,0,null,null,null,null]]
+7/12/2017 0:8:7:654 Sent cancel request: 1512612123935 2017-12-7
+7/12/2017 0:8:7:654 Sent cancel request by internal id: 5857516053
+7/12/2017 0:8:7:654 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 110
+7/12/2017 0:8:7:654 Stop not found, creating Order on tIOTUSD with price 3.9220 at the amount of 110
+7/12/2017 0:8:7:654 Stop created: tIOTUSDat 3.9220at the amount of 110 Client Id: 1512612487654. Date: 2017-12-7
+7/12/2017 0:8:7:654 [0,"oc",[5857472084,null,7240193987,"tIOTUSD",1512612040208,1512612484630,0,-88,"LIMIT",null,null,null,0,"EXECUTED @ 3.9768(-88.0)",null,null,3.9768,3.9768,null,null,null,null,null,0,0,0]]
+7/12/2017 0:8:7:716 [0,"te",[112036058,"tIOTUSD",1512612484608,5857472084,-88,3.9768,"LIMIT",3.9768,1]]
+7/12/2017 0:8:7:769 [0,"pu",["tIOTUSD","ACTIVE",-110,3.96164,0,0,null,null,null,null]]
+7/12/2017 0:8:7:818 [0,"tu",[112036058,"tIOTUSD",1512612484608,5857472084,-88,3.9768,"LIMIT",3.9768,1,-0.27996672,"USD"]]
+7/12/2017 0:8:7:955 [0,"wu",["margin","USD",7895.52278029,0,null]]
+7/12/2017 0:8:8:378 [0,"n",[null,"oc-req",null,null,[null,null,1512612123935,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857516053)."]]
+7/12/2017 0:8:8:379 [0,"n",[null,"oc-req",null,null,[5857516053,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857516053)."]]
+7/12/2017 0:8:8:379 [0,"oc",[5857516053,1,1512612123935,"tIOTUSD",1512612121836,1512612485347,22,22,"LIMIT",null,null,null,0,"CANCELED",null,null,3.862,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:8:9:124 [0,"n",[null,"on-req",null,null,[5857704582,null,1512612487654,"tIOTUSD",null,null,110,110,"LIMIT",null,null,null,null,null,null,null,3.922,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 110.0 IOTA."]]
+7/12/2017 0:8:9:124 [0,"on",[5857704582,1,1512612487654,"tIOTUSD",1512612486027,1512612486102,110,110,"LIMIT",null,null,null,0,"ACTIVE",null,null,3.922,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:8:9:124 Found stop confirmation, setting internal id to 5857704582
+7/12/2017 0:8:59:41 [0,"n",[null,"on-req",null,null,[5857729641,null,7735932010,"tIOTUSD",null,null,-440,-440,"LIMIT",null,null,null,null,null,null,null,4.069,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 440.0 IOTA."]]
+7/12/2017 0:8:59:148 [0,"on",[5857729641,null,7735932010,"tIOTUSD",1512612536011,1512612536082,-440,-440,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.069,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:14:59:271 [0,"pu",["tIOTUSD","ACTIVE",-550,4.047528,0,0,null,null,null,null]]
+7/12/2017 0:14:59:271 Sent cancel request: 1512612487654 2017-12-7
+7/12/2017 0:14:59:271 Sent cancel request by internal id: 5857704582
+7/12/2017 0:14:59:271 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 550
+7/12/2017 0:14:59:272 Stop not found, creating Order on tIOTUSD with price 4.0071 at the amount of 550
+7/12/2017 0:14:59:272 Stop created: tIOTUSDat 4.0071at the amount of 550 Client Id: 1512612899272. Date: 2017-12-7
+7/12/2017 0:14:59:272 [0,"oc",[5857729641,null,7735932010,"tIOTUSD",1512612536011,1512612896188,0,-440,"LIMIT",null,null,null,0,"EXECUTED @ 4.069(-440.0)",null,null,4.069,4.069,null,null,null,null,null,0,0,0]]
+7/12/2017 0:14:59:272 [0,"te",[112044916,"tIOTUSD",1512612896152,5857729641,-440,4.069,"LIMIT",4.069,1]]
+7/12/2017 0:14:59:700 [0,"pu",["tIOTUSD","ACTIVE",-550,4.047528,0,0,null,null,null,null]]
+7/12/2017 0:15:0:321 [0,"n",[null,"oc-req",null,null,[null,null,1512612487654,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857704582)."]]
+7/12/2017 0:15:0:322 [0,"oc",[5857704582,1,1512612487654,"tIOTUSD",1512612486027,1512612897292,110,110,"LIMIT",null,null,null,0,"CANCELED",null,null,3.922,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:15:0:484 [0,"n",[null,"oc-req",null,null,[5857704582,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857704582)."]]
+7/12/2017 0:15:0:862 [0,"tu",[112044916,"tIOTUSD",1512612896152,5857729641,-440,4.069,"LIMIT",4.069,1,-1.432288,"USD"]]
+7/12/2017 0:15:1:138 [0,"n",[null,"on-req",null,null,[5857919586,null,1512612899272,"tIOTUSD",null,null,550,550,"LIMIT",null,null,null,null,null,null,null,4.0071,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 550.0 IOTA."]]
+7/12/2017 0:15:1:138 [0,"on",[5857919586,1,1512612899272,"tIOTUSD",1512612897925,1512612898098,550,550,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0071,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:15:1:138 Found stop confirmation, setting internal id to 5857919586
+7/12/2017 0:15:1:822 [0,"wu",["margin","USD",7894.09049229,0,null]]
+7/12/2017 0:16:17:921 [0,"fcn",[56420728,"fIOT",-1,1512612975000,1512612975000,140.40242798,0,"ACTIVE",null,null,null,0.00001,2,1512612975000,null,0,0,null,0,0.00001,0,null]]
+7/12/2017 0:16:17:921 [0,"fte",[27395304,"fIOT",1512612975000,0,-140.40242798,0.00001,2,null]]
+7/12/2017 0:16:17:921 [0,"ftu",[27395304,"fIOT",1512612975000,0,-140.40242798,0.00001,2,null]]
+7/12/2017 0:16:22:566 [0,"n",[null,"on-req",null,null,[5857962710,null,8179478232,"tIOTUSD",null,null,-2200,-2200,"LIMIT",null,null,null,null,null,null,null,4.134,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit sell order for 2200.0 IOTA."]]
+7/12/2017 0:16:23:22 [0,"on",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612979905,-2200,-2200,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.134,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:24:552 [0,"pu",["tIOTUSD","ACTIVE",-560.42231466,4.04913614,0,0,null,null,null,null]]
+7/12/2017 0:16:24:553 Sent cancel request: 1512612899272 2017-12-7
+7/12/2017 0:16:24:553 Sent cancel request by internal id: 5857919586
+7/12/2017 0:16:24:553 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 560.42231466
+7/12/2017 0:16:24:553 Stop not found, creating Order on tIOTUSD with price 4.0086 at the amount of 560.42231466
+7/12/2017 0:16:24:554 Stop created: tIOTUSDat 4.0086at the amount of 560.42231466 Client Id: 1512612984553. Date: 2017-12-7
+7/12/2017 0:16:24:554 [0,"ou",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612981510,-2189.57768534,-2200,"LIMIT",null,null,null,0,"PARTIALLY FILLED @ 4.134(-10.42)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:24:555 [0,"te",[112047938,"tIOTUSD",1512612981459,5857962710,-10.42231466,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:24:652 [0,"pu",["tIOTUSD","ACTIVE",-560.42231466,4.04913614,0,0,null,null,null,null]]
+7/12/2017 0:16:24:703 [0,"pu",["tIOTUSD","ACTIVE",-960.42231466,4.08448053,0,0,null,null,null,null]]
+7/12/2017 0:16:24:703 Sent cancel request: 1512612984553 2017-12-7
+7/12/2017 0:16:24:703 Sent cancel request by internal id: 5857919586
+7/12/2017 0:16:24:704 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 960.42231466
+7/12/2017 0:16:24:704 Stop not found, creating Order on tIOTUSD with price 4.0436 at the amount of 960.42231466
+7/12/2017 0:16:24:704 Stop created: tIOTUSDat 4.0436at the amount of 960.42231466 Client Id: 1512612984704. Date: 2017-12-7
+7/12/2017 0:16:24:705 [0,"ou",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612981678,-1789.57768534,-2200,"LIMIT",null,null,null,0,"PARTIALLY FILLED @ 4.134(-10.42), PARTIALLY FILLED @ 4.134(-400.0)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:24:705 [0,"te",[112047941,"tIOTUSD",1512612981633,5857962710,-400,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:24:755 [0,"tu",[112047938,"tIOTUSD",1512612981459,5857962710,-10.42231466,4.134,"LIMIT",4.134,1,-0.03446868,"USD"]]
+7/12/2017 0:16:24:857 [0,"wu",["margin","USD",7894.05602361,0,null]]
+7/12/2017 0:16:24:857 [0,"pu",["tIOTUSD","ACTIVE",-960.42231466,4.08448053,0,0,null,null,null,null]]
+7/12/2017 0:16:25:11 [0,"n",[null,"oc-req",null,null,[null,null,1512612899272,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857919586)."]]
+7/12/2017 0:16:25:11 [0,"oc",[5857919586,1,1512612899272,"tIOTUSD",1512612897925,1512612981990,550,550,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0071,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:25:116 [0,"tu",[112047941,"tIOTUSD",1512612981633,5857962710,-400,4.134,"LIMIT",4.134,1,-1.32288,"USD"]]
+7/12/2017 0:16:25:161 [0,"n",[null,"oc-req",null,null,[null,null,1512612984553,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:25:212 [0,"n",[null,"oc-req",null,null,[5857919586,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:25:212 [0,"wu",["margin","USD",7892.73314361,0,null]]
+7/12/2017 0:16:25:322 [0,"n",[null,"on-req",null,null,[5857964285,null,1512612984553,"tIOTUSD",null,null,560.42231466,560.42231466,"LIMIT",null,null,null,null,null,null,null,4.0086,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 560.42231466 IOTA."]]
+7/12/2017 0:16:25:323 [0,"on",[5857964285,1,1512612984553,"tIOTUSD",1512612982216,1512612982267,560.42231466,560.42231466,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0086,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:25:363 [0,"n",[null,"oc-req",null,null,[5857919586,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:25:565 [0,"n",[null,"on-req",null,null,[5857964461,null,1512612984704,"tIOTUSD",null,null,960.42231466,960.42231466,"LIMIT",null,null,null,null,null,null,null,4.0436,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 960.42231466 IOTA."]]
+7/12/2017 0:16:25:621 [0,"on",[5857964461,1,1512612984704,"tIOTUSD",1512612982519,1512612982576,960.42231466,960.42231466,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0436,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:25:621 Found stop confirmation, setting internal id to 5857964461
+7/12/2017 0:16:27:920 [0,"pu",["tIOTUSD","ACTIVE",-1200.41639666,4.09438074,0,0,null,null,null,null]]
+7/12/2017 0:16:27:920 Sent cancel request: 1512612984704 2017-12-7
+7/12/2017 0:16:27:920 Sent cancel request by internal id: 5857964461
+7/12/2017 0:16:27:920 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 1200.41639666
+7/12/2017 0:16:27:920 Stop not found, creating Order on tIOTUSD with price 4.0534 at the amount of 1200.41639666
+7/12/2017 0:16:27:920 Stop created: tIOTUSDat 4.0534at the amount of 1200.41639666 Client Id: 1512612987920. Date: 2017-12-7
+7/12/2017 0:16:27:920 [0,"ou",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612984889,-1549.58360334,-2200,"LIMIT",null,null,null,0,"PARTIALLY FILLED @ 4.134(-10.42), PARTIALLY FILLED @ 4.134(-400.0), PARTIALLY FILLED @ 4.134(-239.99)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:27:920 [0,"te",[112048076,"tIOTUSD",1512612984876,5857962710,-239.994082,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:27:984 [0,"pu",["tIOTUSD","ACTIVE",-1200.41639666,4.09438074,0,0,null,null,null,null]]
+7/12/2017 0:16:28:242 [0,"pu",["tIOTUSD","ACTIVE",-2598.40456066,4.11569661,0,0,null,null,null,null]]
+7/12/2017 0:16:28:242 Sent cancel request: 1512612987920 2017-12-7
+7/12/2017 0:16:28:242 Sent cancel request by internal id: 5857964461
+7/12/2017 0:16:28:242 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 2598.40456066
+7/12/2017 0:16:28:242 Stop not found, creating Order on tIOTUSD with price 4.0745 at the amount of 2598.40456066
+7/12/2017 0:16:28:242 Stop created: tIOTUSDat 4.0745at the amount of 2598.40456066 Client Id: 1512612988242. Date: 2017-12-7
+7/12/2017 0:16:28:242 [0,"ou",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612985209,-151.59543934,-2200,"LIMIT",null,null,null,0,"PARTIALLY FILLED @ 4.134(-10.42), PARTIALLY FILLED @ 4.134(-400.0), PARTIALLY FILLED @ 4.134(-239.99), PARTIALLY FILLED @ 4.134(-1397.99)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:28:258 [0,"te",[112048097,"tIOTUSD",1512612985195,5857962710,-1397.988164,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:28:308 [0,"pu",["tIOTUSD","ACTIVE",-2598.40456066,4.11569661,0,0,null,null,null,null]]
+7/12/2017 0:16:28:359 [0,"n",[null,"oc-req",null,null,[null,null,1512612984704,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857964461)."]]
+7/12/2017 0:16:28:410 [0,"oc",[5857964461,1,1512612984704,"tIOTUSD",1512612982519,1512612985374,960.42231466,960.42231466,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0436,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:28:462 [0,"tu",[112048097,"tIOTUSD",1512612985195,5857962710,-1397.988164,4.134,"LIMIT",4.134,1,-4.62342646,"USD"]]
+7/12/2017 0:16:28:513 [0,"tu",[112048076,"tIOTUSD",1512612984876,5857962710,-239.994082,4.134,"LIMIT",4.134,1,-0.79370843,"USD"]]
+7/12/2017 0:16:28:563 [0,"wu",["margin","USD",7891.93943518,0,null]]
+7/12/2017 0:16:28:721 [0,"n",[null,"on-req",null,null,[5857966273,null,1512612987920,"tIOTUSD",null,null,1200.41639666,1200.41639666,"LIMIT",null,null,null,null,null,null,null,4.0534,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 1200.41639666 IOTA."]]
+7/12/2017 0:16:28:721 [0,"wu",["margin","USD",7887.31600872,0,null]]
+7/12/2017 0:16:28:722 [0,"on",[5857966273,1,1512612987920,"tIOTUSD",1512612985630,1512612985694,1200.41639666,1200.41639666,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0534,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:28:924 [0,"oc",[5857966273,1,1512612987920,"tIOTUSD",1512612985630,1512612985868,1200.41639666,1200.41639666,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0534,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:28:925 [0,"n",[null,"oc-req",null,null,[5857964461,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:29:178 [0,"n",[null,"oc-req",null,null,[5857964461,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857964461)."]]
+7/12/2017 0:16:29:179 [0,"n",[null,"on-req",null,null,[5857966513,null,1512612988242,"tIOTUSD",null,null,2598.40456066,2598.40456066,"LIMIT",null,null,null,null,null,null,null,4.0745,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 2598.40456066 IOTA."]]
+7/12/2017 0:16:29:228 [0,"on",[5857966513,1,1512612988242,"tIOTUSD",1512612986084,1512612986177,2598.40456066,2598.40456066,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0745,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:29:228 Found stop confirmation, setting internal id to 5857966513
+7/12/2017 0:16:29:989 [0,"pu",["tIOTUSD","ACTIVE",-2689.72807467,4.11631806,0,0,null,null,null,null]]
+7/12/2017 0:16:29:989 Sent cancel request: 1512612988242 2017-12-7
+7/12/2017 0:16:29:989 Sent cancel request by internal id: 5857966513
+7/12/2017 0:16:29:989 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 2689.72807467
+7/12/2017 0:16:29:989 Stop not found, creating Order on tIOTUSD with price 4.0752 at the amount of 2689.72807467
+7/12/2017 0:16:29:990 Stop created: tIOTUSDat 4.0752at the amount of 2689.72807467 Client Id: 1512612989989. Date: 2017-12-7
+7/12/2017 0:16:29:990 [0,"ou",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612986947,-60.27192533,-2200,"LIMIT",null,null,null,0,"PARTIALLY FILLED @ 4.134(-10.42), PARTIALLY FILLED @ 4.134(-400.0), PARTIALLY FILLED @ 4.134(-239.99), PARTIALLY FILLED @ 4.134(-1397.99), PARTIALLY FILLED @ 4.134(-91.32)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:29:990 [0,"te",[112048171,"tIOTUSD",1512612986938,5857962710,-91.32351401,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:30:93 [0,"pu",["tIOTUSD","ACTIVE",-2689.72807467,4.11631806,0,0,null,null,null,null]]
+7/12/2017 0:16:30:93 [0,"pu",["tIOTUSD","ACTIVE",-2739.72807467,4.11664076,0,0,null,null,null,null]]
+7/12/2017 0:16:30:93 Sent cancel request: 1512612989989 2017-12-7
+7/12/2017 0:16:30:93 Sent cancel request by internal id: 5857966513
+7/12/2017 0:16:30:93 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 2739.72807467
+7/12/2017 0:16:30:93 Stop not found, creating Order on tIOTUSD with price 4.0755 at the amount of 2739.72807467
+7/12/2017 0:16:30:94 Stop created: tIOTUSDat 4.0755at the amount of 2739.72807467 Client Id: 1512612990093. Date: 2017-12-7
+7/12/2017 0:16:30:94 [0,"ou",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612987083,-10.27192533,-2200,"LIMIT",null,null,null,0,"PARTIALLY FILLED @ 4.134(-10.42), PARTIALLY FILLED @ 4.134(-400.0), PARTIALLY FILLED @ 4.134(-239.99), PARTIALLY FILLED @ 4.134(-1397.99), PARTIALLY FILLED @ 4.134(-91.32), PARTIALLY FILLED @ 4.134(-50.0)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:30:143 [0,"te",[112048174,"tIOTUSD",1512612987066,5857962710,-50,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:30:143 [0,"tu",[112048171,"tIOTUSD",1512612986938,5857962710,-91.32351401,4.134,"LIMIT",4.134,1,-0.30202513,"USD"]]
+7/12/2017 0:16:30:196 [0,"pu",["tIOTUSD","ACTIVE",-2739.72807467,4.11664076,0,0,null,null,null,null]]
+7/12/2017 0:16:30:246 [0,"wu",["margin","USD",7887.01398359,0,null]]
+7/12/2017 0:16:30:348 [0,"tu",[112048174,"tIOTUSD",1512612987066,5857962710,-50,4.134,"LIMIT",4.134,1,-0.16536,"USD"]]
+7/12/2017 0:16:30:349 [0,"n",[null,"oc-req",null,null,[null,null,1512612987920,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857966273)."]]
+7/12/2017 0:16:30:605 [0,"wu",["margin","USD",7886.84862359,0,null]]
+7/12/2017 0:16:30:714 [0,"n",[null,"oc-req",null,null,[5857966513,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857966513)."]]
+7/12/2017 0:16:30:715 [0,"n",[null,"oc-req",null,null,[null,null,1512612988242,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857966513)."]]
+7/12/2017 0:16:30:715 [0,"pu",["tIOTUSD","ACTIVE",-2750,4.1167056,0,0,null,null,null,null]]
+7/12/2017 0:16:30:715 Sent cancel request: 1512612990093 2017-12-7
+7/12/2017 0:16:30:715 Sent cancel request by internal id: 5857966513
+7/12/2017 0:16:30:716 Stop order has different amount, cancelling and creating a new one on tIOTUSD with price undefined at the amount of 2750
+7/12/2017 0:16:30:716 Stop not found, creating Order on tIOTUSD with price 4.0755 at the amount of 2750
+7/12/2017 0:16:30:716 Stop created: tIOTUSDat 4.0755at the amount of 2750 Client Id: 1512612990716. Date: 2017-12-7
+7/12/2017 0:16:30:716 [0,"oc",[5857962710,null,8179478232,"tIOTUSD",1512612979527,1512612987698,0,-2200,"LIMIT",null,null,null,0,"EXECUTED @ 4.134(-10.27): was PARTIALLY FILLED @ 4.134(-10.42), PARTIALLY FILLED @ 4.134(-400.0), PARTIALLY FILLED @ 4.134(-239.99), PARTIALLY FILLED @ 4.134(-1397.99), PARTIALLY FILLED @ 4.134(-91.32), PARTIALLY FILLED @ 4.134(-50.0)",null,null,4.134,4.134,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:30:716 [0,"oc",[5857966513,1,1512612988242,"tIOTUSD",1512612986084,1512612987699,2598.40456066,2598.40456066,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0745,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:30:770 [0,"te",[112048210,"tIOTUSD",1512612987677,5857962710,-10.27192533,4.134,"LIMIT",4.134,1]]
+7/12/2017 0:16:30:773 [0,"n",[null,"oc-req",null,null,[null,null,1512612989989,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:30:880 [0,"n",[null,"oc-req",null,null,[5857966513,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:31:89 [0,"pu",["tIOTUSD","ACTIVE",-2750,4.1167056,0,0,null,null,null,null]]
+7/12/2017 0:16:31:89 [0,"on",[5857967582,1,1512612990093,"tIOTUSD",1512612987899,1512612988076,2739.72807467,2739.72807467,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0755,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:31:193 [0,"n",[null,"on-req",null,null,[5857967582,null,1512612990093,"tIOTUSD",null,null,2739.72807467,2739.72807467,"LIMIT",null,null,null,null,null,null,null,4.0755,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 2739.72807467 IOTA."]]
+7/12/2017 0:16:31:243 [0,"n",[null,"oc-req",null,null,[null,null,1512612990093,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857967582)."]]
+7/12/2017 0:16:31:246 [0,"oc",[5857967582,1,1512612990093,"tIOTUSD",1512612987899,1512612988218,2739.72807467,2739.72807467,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0755,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:31:352 [0,"tu",[112048210,"tIOTUSD",1512612987677,5857962710,-10.27192533,4.134,"LIMIT",4.134,1,-0.03397131,"USD"]]
+7/12/2017 0:16:31:558 [0,"wu",["margin","USD",7886.81465228,0,null]]
+7/12/2017 0:16:31:559 [0,"n",[null,"oc-req",null,null,[5857966513,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"ERROR","Order not found."]]
+7/12/2017 0:16:31:710 [0,"on",[5857967945,1,1512612989989,"tIOTUSD",1512612988620,1512612988654,2689.72807467,2689.72807467,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0752,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:31:763 [0,"n",[null,"on-req",null,null,[5857967945,null,1512612989989,"tIOTUSD",null,null,2689.72807467,2689.72807467,"LIMIT",null,null,null,null,null,null,null,4.0752,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 2689.72807467 IOTA."]]
+7/12/2017 0:16:37:574 [0,"n",[null,"on-req",null,null,[5857970748,null,1512612990716,"tIOTUSD",null,null,2750,2750,"LIMIT",null,null,null,null,null,null,null,4.0755,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitting limit buy order for 2750.0 IOTA."]]
+7/12/2017 0:16:43:467 [0,"on",[5857970748,1,1512612990716,"tIOTUSD",1512612994422,1512613000354,2750,2750,"LIMIT",null,null,null,0,"ACTIVE",null,null,4.0755,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:43:467 Found stop confirmation, setting internal id to 5857970748
+7/12/2017 0:16:52:962 [0,"n",[null,"oc-req",null,null,[5857967945,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857967945)."]]
+7/12/2017 0:16:53:12 [0,"oc",[5857967945,1,1512612989989,"tIOTUSD",1512612988620,1512613009964,2689.72807467,2689.72807467,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0752,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:16:55:599 [0,"n",[null,"oc-req",null,null,[5857964285,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,null],null,"SUCCESS","Submitted for cancellation; waiting for confirmation (ID: 5857964285)."]]
+7/12/2017 0:16:55:600 [0,"oc",[5857964285,1,1512612984553,"tIOTUSD",1512612982216,1512613012575,560.42231466,560.42231466,"LIMIT",null,null,null,0,"CANCELED",null,null,4.0086,0,null,null,null,null,null,0,0,0]]
+7/12/2017 0:18:12:775 [0,"pc",["tIOTUSD","CLOSED",-2750,4.1167056,0,0,null,null,null,null]]
+7/12/2017 0:18:12:775 [0,"wu",["margin","USD",8000.13005228,0,null]]
+7/12/2017 0:18:12:776 [0,"oc",[5857970748,1,1512612990716,"tIOTUSD",1512612994422,1512613089731,0,2750,"LIMIT",null,null,null,0,"EXECUTED @ 4.0755(2750.0)",null,null,4.0755,4.0755,null,null,null,null,null,0,0,0]]
+7/12/2017 0:18:12:776 [0,"te",[112051275,"tIOTUSD",1512613089692,5857970748,2750,4.0755,"LIMIT",4.0755,1]]
+7/12/2017 0:18:12:985 [0,"tu",[112051275,"tIOTUSD",1512613089692,5857970748,2750,4.0755,"LIMIT",4.0755,1,-8.9661,"USD"]]
+7/12/2017 0:18:13:36 [0,"wu",["margin","USD",7991.16395228,0,null]]
