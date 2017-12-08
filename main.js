@@ -5,6 +5,7 @@ const path = require('path')
 const API_KEY = 'SECRET'
 const API_SECRET = 'SECRET'
 
+
 const opts = {
   version: 2,
   transform: true
@@ -20,6 +21,7 @@ var stopOrderAmount = 0
 var stopOrderDate = ''
 var stopOrderPrice = 0
 var ignorePU = false
+var positionAmount = 0
 
 
 bws.on('auth', () => {
@@ -197,18 +199,19 @@ bws.on('message', (msg) => {
   }	  
 
   
-  if (type === 'pu') { // new order confirmed
-    if(payload[1] === 'ACTIVE' && !ignorePU) {
-		if (stopOrderId!=0 && stopOrderAmount!=-payload[2]){
+  if (type === 'pu') { // new order confirmed    
+	if(payload[1] === 'ACTIVE') {		
+		if (stopOrderId!=0 && Math.abs(stopOrderAmount)<Math.abs(payload[2]) && stopOrderInternalId!=0){
 			cancelOrdersByGroupId(1)
 			cancelOrderByClientId(stopOrderId, stopOrderDate)
 			cancelOrder(stopOrderInternalId)			
 			stopOrderId = 0
+			stopOrderInternalId = 0
 			console.log(new Date(Date.now()).toString() + ' Stop order has different amount, cancelling and creating a new one on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])		
 			writeable.write(getCurrentDateTime() + ' Stop order has different amount, cancelling and creating a new one on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])
 			writeable.write('\r\n')		
 		}		
-		if (stopOrderId === 0){
+		if (stopOrderId === 0 && stopOrderInternalId === 0){
 			var target = payload[2]>0 ? payload[3]*1.01 : payload[3]*0.99
 			target = target.toFixed(4)
 			console.log(new Date(Date.now()).toString() + ' Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])		
@@ -217,6 +220,7 @@ bws.on('message', (msg) => {
 			submitStopGainOrder(payload[0], target, -payload[2])
 		}
 	}
+	positionAmount=payload[2]
   }	
   
   if (type === 'on') { // new order confirmed
@@ -241,17 +245,24 @@ bws.on('message', (msg) => {
   
   if (type === 'te') { // trade executed
     if(payload[3] == stopOrderInternalId) {
-		ignorePU = true
+		/*ignorePU = true
 		console.log('Ignoring next position update, stop order being executed')		
 		writeable.write('Ignoring next position update, stop order being executed')
-		writeable.write('\r\n')
+		writeable.write('\r\n')*/
 		
-	} else ignorePU = false
+	} else {
+		/*ignorePU = false
+		console.log('Transaction is not a stop order, consider next position update')		
+		writeable.write('Transaction is not a stop order, consider next position update')
+		writeable.write('\r\n')*/
+	}
   }
 
   if (type === 'pc') { // position closed 
 	stopOrderId = 0
 	stopOrderDate = ''
+	stopOrderInternalId = 0
+	positionAmount = 0
   }
 })
 
