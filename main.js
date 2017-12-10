@@ -22,6 +22,7 @@ var stopOrderDate = ''
 var stopOrderPrice = 0
 var ignorePU = false
 var positionAmount = 0
+var positionBasePrice = 0
 
 
 bws.on('auth', () => {
@@ -100,7 +101,7 @@ function submitStopGainOrder (symbol, price, amount) {
 	  var tempDate = new Date(Date.now())
 	  stopOrderDate = tempDate.getFullYear() + '-' + (tempDate.getMonth()+1) + '-' + tempDate.getDate()
 	  console.log(new Date(Date.now()).toString() + " Stop created")
-	  writeable.write(getCurrentDateTime() + " Stop created: " + symbol + "at " + price + "at the amount of " + amount + " Client Id: " + cId + ". Date: " + stopOrderDate)
+	  writeable.write(getCurrentDateTime() + " Stop created: " + symbol + " at " + price + " at the amount of " + amount + " Client Id: " + cId + ". Date: " + stopOrderDate)
 	  writeable.write('\r\n')
   }
 }
@@ -202,8 +203,8 @@ bws.on('message', (msg) => {
   if (type === 'pu') { // new order confirmed    
 	if(payload[1] === 'ACTIVE') {		
 		if (stopOrderId!=0 && Math.abs(stopOrderAmount)<Math.abs(payload[2]) && stopOrderInternalId!=0){
-			cancelOrdersByGroupId(1)
-			cancelOrderByClientId(stopOrderId, stopOrderDate)
+			//cancelOrdersByGroupId(1)
+			//cancelOrderByClientId(stopOrderId, stopOrderDate)
 			cancelOrder(stopOrderInternalId)			
 			stopOrderId = 0
 			stopOrderInternalId = 0
@@ -212,7 +213,7 @@ bws.on('message', (msg) => {
 			writeable.write('\r\n')		
 		}		
 		if (stopOrderId === 0 && stopOrderInternalId === 0){
-			var target = payload[2]>0 ? payload[3]*1.01 : payload[3]*0.99
+			var target = payload[2]>0 ? payload[3]*1.008: payload[3]*0.992
 			target = target.toFixed(4)
 			console.log(new Date(Date.now()).toString() + ' Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])		
 			writeable.write(getCurrentDateTime() + ' Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -payload[2])
@@ -221,6 +222,7 @@ bws.on('message', (msg) => {
 		}
 	}
 	positionAmount=payload[2]
+	positionBasePrice=payload[3]
   }	
   
   if (type === 'on') { // new order confirmed
@@ -229,6 +231,26 @@ bws.on('message', (msg) => {
 		stopOrderInternalId = payload[0]
 		writeable.write(getCurrentDateTime() + ' Found stop confirmation at ON, setting internal id to ' + stopOrderInternalId)
 		writeable.write('\r\n')
+		if (stopOrderId!=0 && Math.abs(stopOrderAmount)<Math.abs(positionAmount) && stopOrderInternalId!=0){
+			//cancelOrdersByGroupId(1)
+			//cancelOrderByClientId(stopOrderId, stopOrderDate)
+			cancelOrder(stopOrderInternalId)			
+			stopOrderId = 0
+			stopOrderInternalId = 0
+			console.log(new Date(Date.now()).toString() + ' Stop order confirmed but outdaded, cancelling and creating a new one ' + payload[0] + ' with price ' + target + " at the amount of " + -positionAmount)		
+			writeable.write(getCurrentDateTime() + ' Stop order confirmed but outdaded, cancelling and creating a new one on ' + payload[0] + ' with price ' + target + " at the amount of " + -positionAmount)
+			writeable.write('\r\n')		
+		}		
+		if (stopOrderId === 0 && stopOrderInternalId === 0){
+			var target = positionAmount>0 ? positionBasePrice*1.01 : positionBasePrice*0.99
+			target = target.toFixed(4)
+			console.log(new Date(Date.now()).toString() + ' Stop created ' + payload[0] + ' with price ' + target + " at the amount of " + -positionAmount)
+			writeable.write(getCurrentDateTime() + ' Stop not found, creating Order on ' + payload[0] + ' with price ' + target + " at the amount of " + -positionAmount)
+			writeable.write('\r\n')		
+			submitStopGainOrder(payload[3], target, -positionAmount)
+		}
+		
+		
 		//DEBUG ONLY CALL
 		//cancelOrderByClientId(stopOrderId, stopOrderDate)
 		//cancelOrdersByGroupId(1)
